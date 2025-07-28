@@ -4,9 +4,9 @@ import uvicorn
 app = FastAPI()
 
 
-@app.get("/")
-def main(msg: str):
-    return {"message": msg}
+@app.get("/search")
+def search_user(name: str, age: int = 18):
+    return {"name": name, "age": age}
 
 
 if __name__ == "__main__":
